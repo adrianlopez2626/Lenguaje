@@ -1,0 +1,96 @@
+/* 
+   EJERCICIO 07: CSS GRID LAYOUT
+   =============================
+   Instrucciones:
+   Sigue los pasos comentados para aprender a usar CSS Grid.
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f0f2f5;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section {
+    margin-bottom: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+   PASO 1: Galería de Imágenes (Filas y Columnas)
+   - Convierte .grid-gallery en un contenedor grid.
+   - Crea 3 columnas de igual tamaño (1fr cada una).
+   - Añade un espacio (gap) de 15px entre elementos.
+*/
+.grid-gallery {
+    /* Tu código aquí */
+}
+
+.item {
+    background-color: #3498db;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* 
+   PASO 2: Layout de Página (Grid Areas)
+   - Convierte .page-layout en un contenedor grid.
+   - Define las áreas: "nav hero" "nav content" "nav sidebar" "footer footer"
+   - Ajusta las columnas: 200px para el nav, y el resto (1fr).
+   - Ajusta las filas: minmax(100px, auto).
+*/
+.page-layout {
+    /* Tu código aquí */
+    display: grid;
+    gap: 10px;
+    /* Define grid-template-areas AQUÍ */
+}
+
+/* PASO 3: Asigna cada clase a su área correspondiente */
+.nav {
+    grid-area: nav;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+.hero {
+    grid-area: hero;
+    background: #e67e22;
+    color: white;
+    padding: 20px;
+}
+
+.content {
+    grid-area: content;
+    background: #ecf0f1;
+    padding: 20px;
+    min-height: 200px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #bdc3c7;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background: #7f8c8d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

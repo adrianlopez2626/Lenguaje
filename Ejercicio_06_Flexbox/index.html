@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6: Introducción a Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Diseño Flexible con Flexbox</h1>
+        <p>Aprende a alinear elementos fácilmente.</p>
+    </header>
+
+    <main>
+        <h2>1. Justify Content (Eje Principal)</h2>
+        <p>Cambia la clase del contenedor a <code>fila-centro</code> o <code>fila-between</code> en el HTML para ver
+            diferencias.</p>
+
+        <div class="contenedor-flex fila-centro">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+
+        <h2>2. Align Items (Eje Cruzado/Vertical)</h2>
+        <p>Alineación vertical dentro del contenedor.</p>
+
+        <div class="contenedor-flex alineacion-vertical">
+            <div class="item" style="height: 50px;">Corto</div>
+            <div class="item" style="height: 100px;">Alto</div>
+            <div class="item" style="height: 70px;">Medio</div>
+        </div>
+
+        <h2>3. Galería Responsiva (Wrap)</h2>
+        <p>Los elementos bajan a la siguiente línea si no caben.</p>
+
+        <div class="galeria">
+            <div class="foto">Foto 1</div>
+            <div class="foto">Foto 2</div>
+            <div class="foto">Foto 3</div>
+            <div class="foto">Foto 4</div>
+            <div class="foto">Foto 5</div>
+            <div class="foto">Foto 6</div>
+            <div class="foto">Foto 7</div>
+            <div class="foto">Foto 8</div>
+        </div>
+    </main>
+</body>
+
+</html>

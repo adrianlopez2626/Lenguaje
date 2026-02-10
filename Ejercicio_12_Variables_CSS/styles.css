@@ -1,0 +1,62 @@
+/* Ejercicio 12: Variables CSS */
+
+:root {
+    /* Define aquí tus variables */
+    /* Ej: --primary-color: #007bff; */
+
+}
+
+.card {
+    /* Usa las variables aquí */
+    /* border: 1px solid var(--border-color); */
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    /* Usa variable */
+    color: black;
+    /* Usa variable */
+}
+
+.card-header {
+    padding: 1rem;
+    background-color: #eee;
+    /* Usa variable */
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: green;
+    /* Usa variable */
+    margin-top: 1rem;
+}
+
+.card-footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background-color: blue;
+    /* Usa variable */
+    color: white;
+    /* Usa variable */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Modo Oscuro */
+.dark-mode {
+    /* Redefine las variables aquí para cambiar a colores oscuros */
+
+}
+
+/* Nota: Para que el .dark-mode aplique a todo, deberías aplicarlo al body o un contenedor padre y asegurarte que las variables se hereden o estén definidas en el ámbito correcto */

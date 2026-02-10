@@ -1,0 +1,107 @@
+/* =========================================
+   EXAMEN: REPASO CSS
+   Instrucciones: Completa las secciones indicadas 
+   para lograr el diseño del ejemplo.
+   ========================================= */
+
+/* 1. RESET BÁSICO (Completa el box-sizing) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* HEADER Y FOOTER (Estilos básicos ya definidos) */
+header {
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    color: #7f8c8d;
+}
+
+.seccion-repaso {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #3498db;
+    border-radius: 4px;
+}
+
+/* =========================================
+   A COMPLETAR POR EL ESTUDIANTE
+   ========================================= */
+
+/* 1. MODELO DE CAJA 
+   Añade borde, padding y margen a .caja-ejemplo
+*/
+.caja-ejemplo {
+    border: 2px solid rgb(196, 194, 194);
+    padding: 20px;
+    margin-top: 15px;
+    background-color: rgb(194, 194, 194);
+}
+
+.etiqueta-destacada {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* 2. FLEXBOX 
+   Convierte .contenedor-flex en un contenedor flex 
+   y reparte el espacio equitativamente.
+*/
+.contenedor-flex {
+    display: flex;
+    gap: 15px;
+}
+
+.item-flex {
+    flex: 1;
+    background-color: rgb(88, 88, 233);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.item-flex:nth-child(2) {
+    background-color: rgb(95, 143, 23);
+}
+
+/* 3. GRID LAYOUT
+   Crea una rejilla de 2 columnas para .contenedor-grid
+*/
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.celda {
+    background: #9b59b6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

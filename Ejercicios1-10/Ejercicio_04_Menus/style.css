@@ -1,0 +1,81 @@
+/* EJERCICIO 4: MENÚS Y ENLACES */
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+/* 1. MENÚ HORIZONTAL */
+.menu-horizontal ul {
+    list-style-type: none;
+    /* Quitamos los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    /* Fondo oscuro para la barra */
+    text-align: center;
+    /* Centramos los elementos inline-block */
+    border-radius: 4px;
+}
+
+.menu-horizontal li {
+    display: inline-block;
+    /* Hacemos que los li se pongan uno al lado del otro */
+}
+
+.menu-horizontal li a {
+    display: block;
+    /* El enlace ocupa todo el bloque del li */
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    /* Quitamos el subrayado */
+    transition: background-color 0.3s;
+    /* Suavizamos el cambio de color */
+}
+
+/* Efecto Hover (al pasar el ratón) */
+.menu-horizontal li a:hover {
+    background-color: #111;
+    /* Oscurecemos el fondo */
+    color: #ffd700;
+    /* Texto dorado */
+}
+
+/* 2. BOTONES */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: transform 0.1s;
+}
+
+.boton:active {
+    transform: scale(0.98);
+    /* Efecto de clic (se achica un poco) */
+}
+
+.boton-primario {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #0056b3;
+}
+
+.boton-primario:hover {
+    background-color: #0056b3;
+}
+
+.boton-secundario {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.boton-secundario:hover {
+    background-color: #e2e6ea;
+}

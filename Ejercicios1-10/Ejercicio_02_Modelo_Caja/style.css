@@ -1,0 +1,83 @@
+/* EJERCICIO 2: MODELO DE CAJA */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    padding: 20px;
+    color: #333;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+/* Estilos comunes para la explicación */
+.explicacion {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.explicacion ul {
+    margin-left: 20px;
+}
+
+/* 
+   RETO: Observa cómo se comportan las cajas.
+   Ambas tienen el mismo 'width' declarado, pero ocupan diferente espacio en pantalla.
+*/
+
+.caja {
+    background-color: lightblue;
+    width: 300px;
+    /* Ancho declarado igual para ambas */
+    padding: 20px;
+    border: 10px solid #007bff;
+    /* Borde azul grueso */
+    margin: 20px auto;
+    /* Centrado horizontalmente */
+    text-align: center;
+}
+
+/* CAJA 1: content-box (Comportamiento por defecto)
+   El width (300px) se aplica SOLO al contenido.
+   El ancho total es: 300px (content) + 40px (padding L+R) + 20px (border L+R) = 360px.
+*/
+.caja-content {
+    box-sizing: content-box;
+    background-color: #ffe0b2;
+    /* Naranja claro para diferenciar */
+    border-color: #f57c00;
+}
+
+/* CAJA 2: border-box (Recomendado)
+   El width (300px) INCLUYE el contenido + padding + border.
+   El navegador reduce el espacio del contenido para que todo quepa en 300px.
+   Ancho útil para contenido = 300 - 40 - 20 = 240px.
+*/
+.caja-border {
+    box-sizing: border-box;
+    background-color: #c8e6c9;
+    /* Verde claro */
+    border-color: #388e3c;
+}
+
+/* MARGIN COLLAPSE (Colapso de márgenes)
+   Observa cómo los márgenes verticales a veces se combinan entre elementos adyacentes.
+*/
+.nota-margen {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    border: 1px dashed #666;
+    margin-top: 50px;
+    /* Margen grande */
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
