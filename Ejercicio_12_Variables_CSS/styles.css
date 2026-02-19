@@ -1,0 +1,75 @@
+/* Ejercicio 12: Variables CSS */
+
+:root {
+    /* Define aquí tus variables */
+    --primary-color: #007bff;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --border-color: #dddddd;
+    --card-header-bg: #f8f9fa;
+    --price-color: #28a745;
+    --button-hover: #0056b3;
+}
+
+.card {
+    /* Usa las variables aquí */
+    border: 1px solid var(--border-color);
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.card-header {
+    padding: 1rem;
+    background-color: var(--card-header-bg);
+    font-weight: bold;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: var(--price-color);
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.card-footer {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--button-hover);
+}
+
+/* Modo Oscuro */
+.dark-mode {
+    /* Redefine las variables aquí para cambiar a colores oscuros */
+    --primary-color: #6c5ce7;
+    --background-color: #2d3436;
+    --text-color: #f5f6fa;
+    --border-color: #636e72;
+    --card-header-bg: #1e272e;
+    --price-color: #00b894;
+    --button-hover: #a29bfe;
+}
+
+/* Nota: Para que el .dark-mode aplique a todo, deberías aplicarlo al body o un contenedor padre y asegurarte que las variables se hereden o estén definidas en el ámbito correcto */
