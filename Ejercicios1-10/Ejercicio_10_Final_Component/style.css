@@ -1,0 +1,143 @@
+/* 
+   EJERCICIO 10: PROYECTO FINAL - TARJETA DE PRODUCTO PREMIUM
+   =========================================================
+   Este es el reto final. Debes aplicar todo lo aprendido:
+   - Modelo de caja y bordes redondeados.
+   - Flexbox para el contenido.
+   - Posicionamiento para el 'badge'.
+   - Animaciones para el botón y la tarjeta.
+   - Diseño responsivo.
+*/
+
+:root {
+    --primary: #6366f1;
+    --dark: #1e293b;
+    --text-muted: #64748b;
+}
+
+body {
+    background-color: #f8fafc;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 
+   RETOS:
+   1. Centra la tarjeta y dale un diseño moderno (sombras suaves, bordes redondeados).
+   2. Usa posicionamiento ABSOLUTO para el .badge (está dentro de .image-wrapper).
+   3. Haz que la .product-card cambie ligeramente de tamaño o eleve su sombra en HOVER.
+   4. Estilia el botón .buy-btn con un degradado y una transición suave.
+   5. Asegúrate de que en pantallas muy pequeñas, la tarjeta se adapte correctamente.
+*/
+
+.product-card {
+    background: white;
+    width: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper {
+    position: relative;
+    height: 250px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.content {
+    padding: 25px;
+}
+
+.category {
+    color: var(--primary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: var(--dark);
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.old-price {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    font-size: 1.1rem;
+}
+
+.buy-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.buy-btn:hover {
+    opacity: 0.9;
+    transform: scale(0.98);
+}
+
+/* Responsividad básica */
+@media (max-width: 400px) {
+    .product-card {
+        width: 100%;
+        margin: 20px;
+    }
+}

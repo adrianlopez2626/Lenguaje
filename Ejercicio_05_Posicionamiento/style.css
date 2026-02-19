@@ -1,0 +1,156 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8d7da;
+}
+
+h1 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f0f5;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 + p {
+    text-align: left;
+    font-size: 16px;
+    color: #2c3e50;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.caja-fija {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #666666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 100;
+    width: 250px;
+    text-align: center;
+}
+
+.caja-fija p {
+    margin: 0;
+}
+
+.caja-fija strong {
+    color: #ffcc99;
+}
+
+.contenedor-relativo {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin: 20px 0 40px 0;
+    background-color: #e0e0e0;
+    border: 2px solid #666666;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contenedor-relativo h2 {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    margin: 0;
+    font-size: 18px;
+}
+
+.contenedor-relativo h2 + p {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    margin: 0;
+    width: 400px;
+}
+
+.caja-absoluta {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ffe0b2;
+    border: 2px solid #e67e22;
+    border-radius: 5px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.caja-absoluta p {
+    margin: 0;
+}
+
+.caja-absoluta strong {
+    color: #b35100;
+}
+
+.scroll-demo {
+    position: relative;
+    padding-top: 20px;
+}
+
+.caja-sticky {
+    position: sticky;
+    top: 0;
+    background-color: #c8e6c9;
+    border: 2px solid #27ae60;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0 30px 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.caja-sticky p {
+    margin: 0;
+}
+
+.caja-sticky strong {
+    color: #1e8449;
+}
+
+.scroll-demo p {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    border-left: 4px solid #999999;
+    margin-bottom: 50px;
+}
+
+.scroll-demo p:last-child {
+    margin-bottom: 0;
+}

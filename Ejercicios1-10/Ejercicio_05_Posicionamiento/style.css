@@ -1,0 +1,99 @@
+/* EJERCICIO 5: POSICIONAMIENTO */
+
+body {
+    font-family: Consolas, 'Courier New', monospace;
+    margin: 0;
+    padding-bottom: 500px;
+    /* Espacio extra para poder hacer scroll */
+    background-color: #fce4ec;
+}
+
+header {
+    background-color: #e91e63;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 1. FIXED (Fijo)
+   Se fija respecto a la ventana del navegador. No se mueve al hacer scroll.
+*/
+.caja-fija {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    background-color: #880e4f;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    /* Asegura que esté por encima de todo */
+}
+
+/* 2. RELATIVE (Relativo)
+   Este contenedor actúa como marco de referencia para sus hijos absolutos.
+   Si no tuviera position: relative, el hijo absoluto buscaría al body como referencia.
+*/
+.contenedor-relativo {
+    position: relative;
+    width: 60%;
+    height: 300px;
+    background-color: white;
+    margin: 50px auto;
+    border: 2px dashed #e91e63;
+    padding: 20px;
+}
+
+/* 3. ABSOLUTE (Absoluto)
+   Se ubica respecto al ancestro posicionado más cercano (en este caso .contenedor-relativo).
+*/
+.caja-absoluta {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* Lo pegamos a la esquina superior derecha del contenedor */
+    width: 120px;
+    height: 120px;
+    background-color: #f06292;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* 4. STICKY (Pegajoso)
+   Actúa como relativo hasta que se hace scroll y llega al punto indicado (top: 0),
+   entonces se comporta como fixed dentro de su contenedor padre.
+*/
+.scroll-demo {
+    background-color: white;
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    height: 400px;
+    overflow-y: scroll;
+    /* Scroll interno para probar sticky fácilmente */
+}
+
+.caja-sticky {
+    position: sticky;
+    top: 0;
+    background-color: #ffd600;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #fbc02d;
+}
+
+footer {
+    background-color: #e91e63;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

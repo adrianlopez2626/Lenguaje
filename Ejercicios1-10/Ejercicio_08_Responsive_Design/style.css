@@ -1,0 +1,83 @@
+/* 
+   EJERCICIO 08: DISEÑO RESPONSIVO (MOBILE FIRST)
+   ==============================================
+   Instrucciones:
+   1. Define los estilos base pensando en móvil (1 columna).
+   2. Usa Media Queries para añadir columnas en tablets y escritorio.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #eee;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* 
+   PASO 1: Estilos Base (Móvil)
+   - .responsive-grid debe ser un contenedor flex o grid.
+   - Por defecto (móvil), los elementos deben ocupar todo el ancho (1 columna).
+    FORMATO FLEX
+   */
+.responsive-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*
+FORMATO GRID
+.responsive-grid {
+    display: grid;
+    grid-template-columns: 1;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+*/
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* 
+   PASO 2: Media Query para Tablets (min-width: 768px)
+   - Cambia el layout a 2 columnas.
+*/
+@media (min-width: 768px) {
+    .responsive-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 
+   PASO 3: Media Query para Escritorio (min-width: 1024px)
+   - Cambia el layout a 3 columnas.
+*/
+@media (min-width: 1024px) {
+    .responsive-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
