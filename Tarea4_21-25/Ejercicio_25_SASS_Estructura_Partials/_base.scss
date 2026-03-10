@@ -1,1 +1,65 @@
 // Define estilos base aquí
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $text-color;
+    background-color: $background-color;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: $font-size-large;
+    color: $primary-color;
+    margin-bottom: $spacing-medium;
+    
+    @media (max-width: $breakpoint-mobile) {
+        font-size: 20px;
+    }
+}
+
+p {
+    margin-bottom: $spacing-medium;
+    font-size: $font-size-base;
+    
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $font-size-small;
+    }
+}
+
+header {
+    background-color: $primary-color;
+    color: white;
+    padding: $spacing-large;
+    text-align: center;
+    
+    h1 {
+        color: white;
+        margin-bottom: 0;
+    }
+}
+
+main {
+    max-width: 800px;
+    margin: $spacing-xl auto;
+    padding: $spacing-large;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    @media (max-width: $breakpoint-tablet) {
+        margin: $spacing-large;
+        padding: $spacing-medium;
+    }
+    
+    @media (max-width: $breakpoint-mobile) {
+        margin: $spacing-small;
+        padding: $spacing-small;
+    }
+}

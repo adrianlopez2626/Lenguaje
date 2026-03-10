@@ -1,1 +1,55 @@
-/* Ejercicio 24: Mixins *//*# sourceMappingURL=styles.css.map */
+/* Ejercicio 24: Mixins */
+.btn-success {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.btn-success:hover {
+  opacity: 0.8;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.btn-danger:hover {
+  opacity: 0.8;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.btn-warning:hover {
+  opacity: 0.8;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  margin: 20px auto;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */

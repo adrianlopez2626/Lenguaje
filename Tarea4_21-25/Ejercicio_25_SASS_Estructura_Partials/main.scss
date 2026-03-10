@@ -1,5 +1,43 @@
 // Importa tus parciales aquí
-// @import ...
+@import 'variables';
+@import 'base';
 
 // Añade estilos específicos debajo
-header {}
+
+// Estilos adicionales para el main
+.highlight {
+    background-color: $secondary-color;
+    color: white;
+    padding: $spacing-small;
+    border-radius: 4px;
+}
+
+.btn {
+    display: inline-block;
+    padding: $spacing-small $spacing-medium;
+    background-color: $primary-color;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+    
+    &-success {
+        background-color: $secondary-color;
+        
+        &:hover {
+            background-color: darken($secondary-color, 10%);
+        }
+    }
+    
+    &-danger {
+        background-color: $danger-color;
+        
+        &:hover {
+            background-color: darken($danger-color, 10%);
+        }
+    }
+}
