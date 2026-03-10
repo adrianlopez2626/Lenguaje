@@ -1,0 +1,39 @@
+/* Escribe tu SASS aquí */
+
+// Variables
+$primary-color: #f72a2a;
+$background-color: #f0f0f0;
+$font-family: Arial, sans-serif;
+
+// Mixin para centrar
+@mixin center-text {
+    text-align: center;
+    margin: 0 auto;
+}
+
+// Estilos principales
+body {
+    background-color: $background-color;
+    font-family: $font-family;
+    padding: 20px;
+}
+
+h1 {
+    color: $primary-color;
+    @include center-text;
+    margin-bottom: 20px;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+p {
+    color: $primary-color;
+    @include center-text;
+    font-size: 18px;
+    max-width: 600px;
+    padding: 20px;
+    border: 2px solid $primary-color;
+    border-radius: 8px;
+}

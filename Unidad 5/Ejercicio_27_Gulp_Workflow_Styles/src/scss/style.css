@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* Escribe tu SASS aquí */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  color: #ff0000;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+h1:hover {
+  text-decoration: underline;
+}
+
+p {
+  color: #ff0000;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 18px;
+  max-width: 600px;
+  padding: 20px;
+  border: 2px solid #ff0000;
+  border-radius: 8px;
+}/*# sourceMappingURL=style.css.map */

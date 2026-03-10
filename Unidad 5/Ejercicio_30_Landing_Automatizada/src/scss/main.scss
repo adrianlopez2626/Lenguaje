@@ -1,0 +1,205 @@
+// Estilos de la Landing
+// Usa variables y nesting
+
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$dark-color: #2c3e50;
+$light-color: #ecf0f1;
+$text-color: #333;
+$white: #fff;
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition($property: all, $duration: 0.3s) {
+    transition: $property $duration ease;
+}
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: $text-color;
+    line-height: 1.6;
+}
+
+// Navbar
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: $dark-color;
+    color: $white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $primary-color;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin-left: 2rem;
+
+            a {
+                color: $white;
+                text-decoration: none;
+                @include transition(color);
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    // Menú hamburguesa
+    .burger {
+        display: none;
+        cursor: pointer;
+
+        div {
+            width: 25px;
+            height: 3px;
+            background-color: $white;
+            margin: 5px;
+            @include transition;
+
+            &.active {
+                &:nth-child(1) {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: rotate(-45deg) translate(7px, -6px);
+                }
+            }
+        }
+
+        @media (max-width: $tablet) {
+            display: block;
+        }
+    }
+
+    // Menú móvil activo
+    &.nav-active {
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background-color: $dark-color;
+            padding: 2rem;
+            text-align: center;
+            animation: slideDown 0.5s ease;
+
+            li {
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
+// Hero Section
+.hero {
+    @include flex-center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    color: $white;
+    text-align: center;
+    padding: 0 1rem;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        animation: fadeInUp 1s ease;
+
+        @media (max-width: $mobile) {
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        animation: fadeInUp 1s ease 0.3s both;
+
+        @media (max-width: $mobile) {
+            font-size: 1rem;
+        }
+    }
+
+    .cta-btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        background-color: $white;
+        color: $primary-color;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        @include transition;
+        animation: fadeInUp 1s ease 0.6s both;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+// Animaciones
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
